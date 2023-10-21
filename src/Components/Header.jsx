@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
       <div className="navbar bg-base-200 rounded-md">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">Muslin E-Store</a>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">Muslin E-Store</Link>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -36,9 +37,9 @@ const Header = () => {
                 <span className="font-bold text-lg">8 Items</span>
                 
                 <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
+                  <Link to="/cart" className="btn btn-primary btn-block">
                     View cart
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -54,10 +55,9 @@ const Header = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+                
+                <Link className="justify-between" to="/profile">Profile
+                  <span className="badge">New</span></Link>
               </li>
              
               <li>
