@@ -6,12 +6,13 @@ const Header = () => {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   return (
     <div>
-      <div className="navbar bg-base-200 rounded-md">
+      <div className="w-[90%] navbar bg-base-200 rounded-md fixed z-10">
         <div className="flex-1">
           <Link to="/" className="btn btn-ghost normal-case text-xl">Muslin E-Store</Link>
         </div>
         <div className="flex-none">
-          <div className="dropdown dropdown-end">
+          <div  className="dropdown dropdown-end">
+            <Link to="/cart">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <svg
@@ -31,23 +32,18 @@ const Header = () => {
                 <span className="badge badge-sm indicator-item">{cartItems.length}</span>
               </div>
             </label>
+            </Link>
             <div
               tabIndex={0}
               className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
-              <div className="card-body">
-                
-                <div className="card-actions">
-                  <Link to="/cart" className="btn btn-primary btn-block">
-                    View cart
-                  </Link>
-                </div>
-              </div>
+              
             </div>
           </div>
-          <div className="dropdown dropdown-end">
+
+          <div className="dropdown dropdown-end font-bold">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-12 rounded-full">
                 <img src="https://oliver-andersen.se/wp-content/uploads/2018/03/cropped-Profile-Picture-Round-Color.png" />
               </div>
             </label>
@@ -58,7 +54,7 @@ const Header = () => {
               <li>
                 
                 <Link className="justify-between" to="/profile">Profile
-                  <span className="badge">New</span></Link>
+                  <span className="badge bg-sky-500">New</span></Link>
               </li>
              
               <li>

@@ -4,8 +4,8 @@ const Cart = () => {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
   return (
-    <div>
-      <h1 className="font-bold text-6xl text-center mt-6">Your Shopping Cart</h1>
+    <div >
+      <h1 className="pt-20 font-bold text-3xl lg:text-6xl text-center">Your Shopping Cart</h1>
       <div className="grid lg:grid-cols-4 gap-5 mx-auto mt-10 mb-24">
         {cartItems.map((item) => (
           <div key={item.id} className="card card-compact lg:w-80 bg-base-100 shadow-xl my-12">
@@ -27,7 +27,7 @@ const Cart = () => {
                 <button
                   className="px-4 py-2 rounded-md text-white font-semibold text-base bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 ..."
                 >
-                  Remove from Cart
+                  Remove
                 </button>
                 <p className="text-right text-2xl font-semibold">$ {item.price}</p>
               </div>

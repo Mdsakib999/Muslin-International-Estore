@@ -23,17 +23,18 @@ const Items = () => {
     cartItems.push(item);
     localStorage.setItem("cart", JSON.stringify(cartItems));
     alert("Item added to cart");
+    location.reload();
   };
 
   return (
     <div>
       <h1 className="font-bold text-6xl text-center mt-6">Our Products</h1>
       <p className="text-center my-6">
-        It's time to build your bright future. Explore thousands of job openings
+        It's time to make your Shopping. Explore thousands of Products
         with all the information you need.
       </p>
 
-      <div className="category-buttons text-center mt-5">
+      <div className=" category-buttons text-center">
         <button
           className=" ml-3 px-4 py-2 rounded-md text-white font-semibold text-base bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 mr-5"
           onClick={() => setSelectedCategory(null)}
@@ -53,7 +54,7 @@ const Items = () => {
           Jewelry
         </button>
         <button
-          className=" ml-3 px-4 py-2 rounded-md text-white font-semibold text-base bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 mr-5"
+          className="mt-5 lg:mt-0 ml-3 px-4 py-2 rounded-md text-white font-semibold text-base bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 mr-5"
           onClick={() => setSelectedCategory("electronics")}
         >
           Electronics
