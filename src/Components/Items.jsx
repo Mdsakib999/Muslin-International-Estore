@@ -22,7 +22,6 @@ const Items = () => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     cartItems.push(item);
     localStorage.setItem("cart", JSON.stringify(cartItems));
-    alert("Item added to cart");
     location.reload();
   };
 
